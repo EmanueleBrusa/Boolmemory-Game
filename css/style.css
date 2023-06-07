@@ -1,0 +1,68 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body{
+    font-family: 'Montserrat', sans-serif;
+    color: #fff;
+    background-color: #001632;
+}
+
+/* COMMON */
+.main-color{
+    color: #001632;
+}
+
+/* HEADER */
+header{
+    height: 75px;
+    background-color: #fff;
+}
+
+#difficulty, #start{
+    background-color: #001632;
+    border: none;
+    border-radius: 0px;
+    color: #fff;
+    padding: 10px;
+}
+
+#difficulty:hover, #start:hover{
+    background-color: #010c1b;
+    color: #fff;
+}
+
+/* FINE HEADER */
+
+/*GRID*/
+#grid{
+    width: 100%;
+}
+
+.game-card{
+    position: relative;
+    cursor: pointer;
+    transform-origin: center;
+    transform-style: preserve-3d; /*Mi mantiene le componenti 3d dell'animazione*/
+    transition: transform 1s;
+}
+
+.card-face-back, .card-face-front{
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    -webkit-backface-visibility: hidden; /* Safari */
+    backface-visibility: hidden; /* Retro di un elemento deve essere visibile o meno*/
+}
+
+.card-face-front{
+    transform: rotateY(180deg);
+}
+
+.game-card.flipped{
+    transform: rotateY(-180deg);
+}
